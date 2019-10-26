@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Posts from "./components/Posts/Posts";
+import Post from "./components/Posts/Post";
+import NewPost from "./components/NewPost/NewPost";
+import UpdatePost from "./components/UpdatePost/UpdatePost";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+const App = () => {
+
+  // client.query({
+  //   query: search
+  // }).then(res => {
+  //   console.log("Response obj", res);
+  // });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NewPost />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Posts} />
+          <Route path="/post/new" component={NewPost} />
+          <Route path="/post/update/:id" component={UpdatePost} />
+          <Route path="/post/:id" component={Post} />
+        </Switch>
+      </Router>
+      </React.Fragment>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,7 @@
+  query GET_TEN_POSTS ($skip: Int!, $first: Int!) {
+    posts(orderBy: createdAt_DESC, skip: $skip, first: $first) {
+      id
+      title
+      body
+    }
+  }
