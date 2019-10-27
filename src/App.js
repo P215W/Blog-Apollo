@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <p>helas</p>
       <NewPost />
       <Router>
         <Switch>
