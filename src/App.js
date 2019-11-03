@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 const App = () => {
 
   // client.query({
-  //   query: search
+  //   query: search maxvalue
   // }).then(res => {
   //   console.log("Response obj", res);
   // });

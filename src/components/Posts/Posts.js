@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
+import GET_TEN_POSTS from "./Posts.graphql";
 
 // const GET_POSTS = gql`
 //     query getAllPosts {
@@ -13,15 +14,15 @@ import { Link } from "react-router-dom";
 //     }
 //   `;
 
-const GET_TEN_POSTS = gql`
-  query getTenPosts($skip: Int!, $first: Int!) {
-    posts(orderBy: createdAt_DESC, skip: $skip, first: $first) {
-      id
-      title
-      body
-    }
-  }
-`;
+// const GET_TEN_POSTS = gql`
+//   query getTenPosts($skip: Int!, $first: Int!) {
+//     posts(orderBy: createdAt_DESC, skip: $skip, first: $first) {
+//       id
+//       title
+//       body
+//     }
+//   }
+// `;
 
 // let skipValue = 0;
 const FIRST_VALUE = 10;
